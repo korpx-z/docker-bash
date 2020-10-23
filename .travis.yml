@@ -5,7 +5,7 @@ env:
   global:
     - BUILD_DIR="$PWD/4.3"
     - REPO="quay.io/ibmz/bash"
-    - TAG="$REPO:s390x"
+    - TAG="$REPO:4.3"
 before_script: 
   - cd $BUILD_DIR && chmod +x *
   - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
