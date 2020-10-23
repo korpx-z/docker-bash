@@ -3,7 +3,7 @@ services:
   - docker
 env:
   global:
-    - BUILD_DIR="$PWD/4.4"
+    - BUILD_DIR="$PWD/5.0"
     - REPO="quay.io/ibmz/bash"
     - TAG="$REPO:s390x"
 before_script: 

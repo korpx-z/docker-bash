@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.12
+FROM quay.io/ibmz/alpine:3.12
 
 # https://ftp.gnu.org/gnu/bash/?C=M;O=D
 ENV _BASH_VERSION 5.0.18
