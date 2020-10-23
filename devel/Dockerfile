@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.12
+FROM quay.io/ibmz/alpine:3.12
 
 # https://git.savannah.gnu.org/cgit/bash.git/commit/?h=devel
 ENV _BASH_COMMIT 75c5460c4832ac1c75d7cea4333d0838203a708b
