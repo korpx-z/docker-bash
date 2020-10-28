@@ -3,13 +3,16 @@ services:
   - docker
 env:
   global:
-    - BUILD_DIR="$PWD/4.4"
+    - TEST_DIR="$PWD/test/4.4/"
+    - TEST_SCRIPT="test.sh"
+    - BUILD_DIR="$PWD/4.4/"
     - REPO="quay.io/ibmz/bash"
     - TAG="$REPO:4.4"
-before_script: 
-  - cd $BUILD_DIR && chmod +x *
+before_script:
   - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
-script: 
-  - docker build $BUILD_DIR --tag $TAG
+  - cd $TEST_DIR && chmod +x $TEST_SCRIPT
+script:
+  - cd $BUILD_DIR && docker build . --tag $TAG
 after_script:
   - docker push $TAG
+  - cd $TEST_DIR && bash $TEST_SCRIPT
