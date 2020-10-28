@@ -7,13 +7,10 @@ export ANSI_RESET="\e[0m"
 echo -e "\n $ANSI_YELLOW *** testing docker run - bash *** $ANSI_RESET \n"
 
 echo -e "$ANSI_YELLOW Test docker run of Bash: $ANSI_RESET"
-docker run -i --name some-bash quay.io/ibmz/bash:4.4 bash --version
-docker inspect some-bash | grep 'Running'
+docker run -i --rm --name version-bash quay.io/ibmz/bash:4.4 bash --version
 
 # expecting
 # Hello World!
-docker exec -i some-bash echo 'Hello World!'
-
-docker rm some-bash
+docker run -i --rm --name hello-bash quay.io/ibmz/bash:4.4 echo 'Hello World!'
 
 echo -e "\n $ANSI_GREEN *** TEST COMPLETED SUCESSFULLY *** $ANSI_RESET \n"
