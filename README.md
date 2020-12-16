@@ -2,7 +2,7 @@
 -    [build source](https://github.com/korpx-z/docker-bash)
 -    [original source code](https://github.com/tianon/docker-bash)
 
-## Tags 
+## Tags (All within their respected branches)
 -	[`4.2`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.2)
 -	[`4.3`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.3)
 -	[`4.4`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.4)
