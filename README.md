@@ -2,7 +2,7 @@
 -    [build source](https://github.com/korpx-z/docker-bash)
 -    [original source code](https://github.com/tianon/docker-bash)
 
-## Tags (built within their respected branches)
+## Tags 
 -	[`4.2`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.2)
 -	[`4.3`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.3)
 -	[`4.4`](https://travis-ci.com/korpx-z/docker-bash.svg?branch=4.4)
@@ -32,7 +32,7 @@ There are a few main things that are important to note regarding this image:
 ## Interactive shell
 
 ```console
-$ docker run -it --rm quay.io/ibmz/bash:4.4
+$ docker run -it --rm quay.io/ibm/bash:4.4
 bash-4.4# which bash
 /usr/local/bin/bash
 bash-4.4# echo $BASH_VERSION
@@ -45,7 +45,7 @@ bash-4.4# echo $BASH_VERSION
 $ docker volume create <your_volume>
 $ mkdir scripts/
 #filling the created volume with contents from the host file system can be tricky..
-$ docker run -d --rm --name temp -v <your_volume>:/root/ quay.io/ibmz/alpine:3.12 tail -f /dev/null
+$ docker run -d --rm --name temp -v <your_volume>:/root/ quay.io/ibm/alpine:3.12 tail -f /dev/null
 $ docker cp scripts/. temp:/root
 $ docker stop temp
 ```
@@ -53,13 +53,13 @@ $ docker stop temp
 Your volume will now contain any scripts you've placed within `scripts/` on your host system - and it can now be mounted into a container.
 
 ```console
-$ docker run -it --rm -v <your_volume>:/~ quay.io/ibmz/bash:4.4 bash <path/to/your/mounted/script>
+$ docker run -it --rm -v <your_volume>:/~ quay.io/ibm/bash:4.4 bash <path/to/your/mounted/script>
 ```
 
 ## Testing scripts via `Dockerfile`
 
 ```dockerfile
-FROM quay.io/ibmz/bash:4.4
+FROM quay.io/ibm/bash:4.4
 
 COPY script.sh /
 
