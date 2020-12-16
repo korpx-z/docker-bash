@@ -6,7 +6,7 @@ env:
     - TEST_DIR="$PWD/test/devel/"
     - TEST_SCRIPT="test.sh"
     - BUILD_DIR="$PWD/devel/"
-    - REPO="quay.io/ibmz/bash"
+    - REPO="quay.io/ibm/bash"
     - TAG="$REPO:devel"
 before_script:
   - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
